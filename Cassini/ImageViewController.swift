@@ -37,19 +37,42 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
     var imageURL: URL? {
         didSet {
             image = nil
-            fetchImage()
-
-//            if view.window != nil {
-//                fetchImage()
-//            }
+            //fetchImage()
+            if view.window != nil {
+                fetchImage()
+            }
         }
     }
     
     private func fetchImage() {
         if let url = imageURL {
-            if let imageData = NSData(contentsOf: url ) {
-                image = UIImage(data: imageData as Data)
+            
+            spinner?.startAnimating()
+            
+            //dispatch_async(DispatchQueue.global(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)) {
+            DispatchQueue.global(qos: DispatchQoS.QoSClass.userInitiated).async() {
+                let contentsOfURL = NSData(contentsOf: url )
+                //if let imageData = NSData(contentsOf: url )
+                DispatchQueue.main.async { [weak weakSelf = self] in
+                    
+                    if url == weakSelf?.imageURL
+                    {
+                        if let imageData = contentsOfURL {
+                            weakSelf?.image = UIImage(data: imageData as Data)
+                        } else {
+                            weakSelf?.spinner?.stopAnimating()
+                        }
+                    } else {
+                        print("ignored data returned from url \(url)")
+                    }
+                   
+                }
+            
             }
+            
+//            if let imageData = NSData(contentsOf: url ) {
+//                image = UIImage(data: imageData as Data)
+//            }
         }
     }
     @IBOutlet weak var scrollView: UIScrollView!{
@@ -73,6 +96,8 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
     
     private var imageView = UIImageView()
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
+    
     private var image: UIImage? {
         get {
             return imageView.image
@@ -84,12 +109,13 @@ class ImageViewController: UIViewController, UIScrollViewDelegate
         }
     }
 
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        if image == nil {
-//            fetchImage()
-//        }
-//    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if image == nil {
+            fetchImage()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

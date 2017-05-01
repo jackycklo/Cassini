@@ -41,6 +41,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103C03BE1EB75C4000A80188 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				103EE6001EB7420400539042 /* Assets.xcassets */,
+				103EE5F91EB7420400539042 /* AppDelegate.swift */,
+				103EE5FB1EB7420400539042 /* ViewController.swift */,
+				103EE6021EB7420400539042 /* LaunchScreen.storyboard */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		103EE5ED1EB7420400539042 = {
 			isa = PBXGroup;
 			children = (
@@ -60,11 +71,8 @@
 		103EE5F81EB7420400539042 /* Cassini */ = {
 			isa = PBXGroup;
 			children = (
-				103EE5F91EB7420400539042 /* AppDelegate.swift */,
-				103EE5FB1EB7420400539042 /* ViewController.swift */,
+				103C03BE1EB75C4000A80188 /* Supporting Files */,
 				103EE5FD1EB7420400539042 /* Main.storyboard */,
-				103EE6001EB7420400539042 /* Assets.xcassets */,
-				103EE6021EB7420400539042 /* LaunchScreen.storyboard */,
 				103EE6051EB7420400539042 /* Info.plist */,
 				103EE60B1EB7422900539042 /* ImageViewController.swift */,
 				103EE60D1EB7423500539042 /* CassiniViewController.swift */,
