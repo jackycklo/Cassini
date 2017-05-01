@@ -14,6 +14,7 @@
 		103EE6041EB7420400539042 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 103EE6021EB7420400539042 /* LaunchScreen.storyboard */; };
 		103EE60C1EB7422900539042 /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE60B1EB7422900539042 /* ImageViewController.swift */; };
 		103EE60E1EB7423500539042 /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE60D1EB7423500539042 /* CassiniViewController.swift */; };
+		103EE6101EB7450E00539042 /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103EE60F1EB7450E00539042 /* DemoURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		103EE6051EB7420400539042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		103EE60B1EB7422900539042 /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		103EE60D1EB7423500539042 /* CassiniViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
+		103EE60F1EB7450E00539042 /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				103EE6051EB7420400539042 /* Info.plist */,
 				103EE60B1EB7422900539042 /* ImageViewController.swift */,
 				103EE60D1EB7423500539042 /* CassiniViewController.swift */,
+				103EE60F1EB7450E00539042 /* DemoURL.swift */,
 			);
 			path = Cassini;
 			sourceTree = "<group>";
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				103EE6101EB7450E00539042 /* DemoURL.swift in Sources */,
 				103EE5FC1EB7420400539042 /* ViewController.swift in Sources */,
 				103EE60C1EB7422900539042 /* ImageViewController.swift in Sources */,
 				103EE5FA1EB7420400539042 /* AppDelegate.swift in Sources */,
@@ -312,6 +316,7 @@
 				103EE60A1EB7420400539042 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
